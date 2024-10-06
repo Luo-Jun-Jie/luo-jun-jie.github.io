@@ -1,59 +1,185 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background: black;
     color: #fff;
-    padding: 10px 0;
+    padding: 60px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
     margin: 0;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.4em;
+    font-weight: 300;
+    margin-top: 10px;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    background-color: #444;
-    padding: 10px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
+.menu-item {
+    background-color: black;
     color: #fff;
-    text-decoration: none;
+    border: none;
     margin: 0 15px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 30px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.menu-item:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item.active {
+    background-color: #222;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 main {
-    max-width: 900px;
-    margin: 20px auto;
+    max-width: 1200px;
+    margin: 40px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
 }
 
 h2 {
     color: #333;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h3 {
+    color: #444;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.cv-section {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cv-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cv-section li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.cv-section li:last-child {
+    border-bottom: none;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
+    padding: 30px;
+    background-color: black;
     color: #fff;
+    margin-top: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo-section img {
+.purdue-logo {
     max-width: 150px;
     height: auto;
+    margin: 20px 0;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+.hidden {
+    display: none;
+}
+
+section {
+    transition: opacity 0.5s ease;
+}
+
+/* Icons and button details */
+i {
+    margin-right: 8px;
+}
+
+/* Fade in and out animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+.hidden {
+    display: none;
 }
