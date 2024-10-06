@@ -8,12 +8,27 @@ body {
     line-height: 1.6;
 }
 
+/* Header Styling */
 header {
-    background: black;
+    background: linear-gradient(to bottom, black, #333);
     color: #fff;
-    padding: 60px;
+    padding: 40px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    max-width: 60px;
 }
 
 header h1 {
@@ -29,6 +44,7 @@ header p {
     margin-top: 10px;
 }
 
+/* Navigation Menu */
 nav {
     display: flex;
     justify-content: center;
@@ -62,6 +78,7 @@ nav {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Main Content */
 main {
     max-width: 1200px;
     margin: 0 auto 40px;
@@ -112,23 +129,28 @@ p {
     border-bottom: none;
 }
 
-/* Footer Enhancements */
+/* Footer Styling */
 footer {
-    text-align: center;
-    padding: 30px;
-    background-color: black;
+    background: #222;
     color: #fff;
-    margin-top: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4);
 }
 
-footer .purdue-logo {
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-content .purdue-logo {
     max-width: 150px;
-    height: auto;
-    margin: 20px auto;
+    margin: 20px 0;
 }
 
-.social-icons {
+.footer-content .social-icons {
     margin-bottom: 20px;
 }
 
@@ -142,6 +164,13 @@ footer .purdue-logo {
 
 .social-icons a:hover {
     color: #ffcc00;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
 }
 
 /* Section Animations */
@@ -185,4 +214,21 @@ footer .purdue-logo {
 /* Icon and button details */
 i {
     margin-right: 8px;
+}
+
+/* Responsive Header and Footer Adjustments */
+@media (max-width: 768px) {
+    .header-logo {
+        position: relative;
+        left: 0;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
 }
