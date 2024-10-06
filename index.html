@@ -6,33 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junjie Luo - Academic Profile</title>
     <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Junjie Luo</h1>
-        <p>PhD Candidate, Electrical and Computer Engineering, Purdue University</p>
+        <div class="header-container">
+            <h1>Junjie Luo</h1>
+            <p>PhD Student, Electrical and Computer Engineering, Purdue University</p>
+        </div>
     </header>
 
+    <!-- Navigation with icons -->
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#contact">Contact</a>
+        <button class="menu-item active" onclick="showSection('about')">
+            <i class="fas fa-user"></i> About Me
+        </button>
+        <button class="menu-item" onclick="showSection('research')">
+            <i class="fas fa-flask"></i> Research
+        </button>
+        <button class="menu-item" onclick="showSection('publications')">
+            <i class="fas fa-book"></i> Publications
+        </button>
+        <button class="menu-item" onclick="showSection('contact')">
+            <i class="fas fa-envelope"></i> Contact
+        </button>
     </nav>
 
+    <!-- Section content -->
     <main>
-        <section id="about">
+        <section id="about" class="section-content">
             <h2>About Me</h2>
             <p>Hello! I am Junjie Luo, a PhD student in Electrical and Computer Engineering at Purdue University. My
                 research focuses on Depth from Defocus methods, particularly Depth from Couple Optical Differentiation
                 (COD), and real-time depth estimation. I am passionate about advancing imaging techniques and developing
                 computational methods to solve complex optical problems.</p>
+
+            <!-- Added Short CV -->
+            <div class="cv-section">
+                <h3>Short CV</h3>
+                <ul>
+                    <li>PhD Student, Electrical and Computer Engineering, Purdue University (Present)</li>
+                    <li>MSc in Computer Information and Technology, Purdue University</li>
+                    <li>BSc in Computer Science, Sun Yat-sun University</li>
+                </ul>
+            </div>
         </section>
 
-        <section id="research">
+        <section id="research" class="section-content hidden">
             <h2>Research</h2>
             <p>My research interests include:</p>
             <ul>
@@ -46,7 +68,7 @@
                 real-time.</p>
         </section>
 
-        <section id="publications">
+        <section id="publications" class="section-content hidden">
             <h2>Publications</h2>
             <ul>
                 <li><strong>Luo, J., Liu, Y., Alexander, E. and Guo, Q.</strong>, 2024. Depth from Coupled Optical
@@ -57,20 +79,10 @@
                     Quanta Color Imaging. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
                     Recognition (pp. 25138-25148).
                 </li>
-                <!-- Add more publications here -->
             </ul>
         </section>
 
-        <!-- <section id="teaching">
-            <h2>Teaching</h2>
-            <p>I have served as a teaching assistant for the following courses:</p>
-            <ul>
-                <li>ECE XXXX - Course Title</li>
-                <li>ECE XXXX - Another Course Title</li>
-            </ul>
-        </section> -->
-
-        <section id="contact">
+        <section id="contact" class="section-content hidden">
             <h2>Contact</h2>
             <p>You can reach me at:</p>
             <ul>
@@ -78,16 +90,19 @@
                 <li>Office: Purdue University, Electrical and Computer Engineering Department</li>
             </ul>
         </section>
-
-        <section class="logo-section">
-            <h2>Affiliations</h2>
-            <img src="./img/Purdue_logo.png" alt="Purdue University Logo">
-        </section>
     </main>
 
     <footer>
+        <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:luo330@purdue.edu"><i class="fas fa-envelope"></i></a>
+        </div>
+        <img src="./img/Purdue_logo.png" alt="Purdue University Logo" class="purdue-logo">
         <p>&copy; 2024 Junjie Luo | Last updated: October 2024</p>
     </footer>
+
+    <script src="./src/scripts.js"></script>
 
 </body>
 
