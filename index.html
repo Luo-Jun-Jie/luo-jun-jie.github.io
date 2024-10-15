@@ -21,7 +21,7 @@
     <!-- Navigation with icons -->
     <nav>
         <a href="#about" class="menu-item"><i class="fas fa-user"></i> About Me</a>
-        <a href="#research" class="menu-item"><i class="fas fa-flask"></i> Research</a>
+        <a href="#education" class="menu-item"><i class="fas fa-flask"></i> Education</a>
         <a href="#publications" class="menu-item"><i class="fas fa-book"></i> Publications</a>
         <a href="#contact" class="menu-item"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
@@ -29,15 +29,28 @@
     <!-- Section content -->
     <main>
         <!-- About Me Section -->
-        <section id="about" class="section-content block-frame">
+        <section id="about" class="section-content block-frame animate-section">
             <h2>About Me</h2>
-            <p>Hello! I am Junjie Luo, a PhD student in Electrical and Computer Engineering at Purdue University. My
-                research focuses on Depth from Defocus methods, particularly Depth from Couple Optical Differentiation
-                (COD), and real-time depth estimation. I am passionate about advancing imaging techniques and developing
-                computational methods to solve complex optical problems.</p>
+            <div class="scrollable-content">
+                <p>Hello! I am Junjie Luo, a PhD student in Electrical and Computer Engineering at Purdue University. My
+                    research focuses on Depth from Defocus methods, particularly Depth from Couple Optical Differentiation
+                    (COD), and real-time depth estimation. I am passionate about advancing imaging techniques and developing
+                    computational methods to solve complex optical problems.</p>
 
-            <!-- Added Short CV -->
-            <div class="cv-section">
+                <p>My research interests include:</p>
+                <ul>
+                    <li>Depth from Defocus (DfD) techniques</li>
+                    <li>Computational imaging</li>
+                    <li>Real-time depth estimation</li>
+                    <li>Optical differentiation methods</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section-content block-frame animate-section">
+            <h2>Education</h2>
+            <div class="scrollable-content">
                 <h3>Short CV</h3>
                 <ul>
                     <li>PhD Student, Electrical and Computer Engineering, Purdue University (Present)</li>
@@ -47,38 +60,22 @@
             </div>
         </section>
 
-        <!-- Research Section -->
-        <section id="research" class="section-content block-frame">
-            <h2>Research</h2>
-            <p>My research interests include:</p>
-            <ul>
-                <li>Depth from Defocus (DfD) techniques</li>
-                <li>Computational imaging</li>
-                <li>Real-time depth estimation</li>
-                <li>Optical differentiation methods</li>
-            </ul>
-            <p>Currently, I am working on a method called Depth from Couple Optical Differentiation, which involves
-                capturing multiple images with varying aperture sizes and optical power to estimate object depth in
-                real-time.</p>
-        </section>
-
         <!-- Publications Section -->
-        <section id="publications" class="section-content block-frame">
+        <section id="publications" class="section-content block-frame animate-section">
             <h2>Publications</h2>
-            <div class="publications-container">
+            <div class="scrollable-content publications-container">
                 <div class="publication-card">
                     <div class="publication-info">
                         <h3>Depth from Coupled Optical Differentiation</h3>
                         <p><strong>Authors:</strong> Luo, J., Liu, Y., Alexander, E. and Guo, Q.</p>
                         <p class="publication-abstract"><strong>Abstract:</strong>
                             <br>We propose depth from coupled optical differentiation, a low-computation
-                            passive-lighting 3D sensing mechanism. It is based on our discovery that per-pixel object
-                            distance can be rigorously determined by a coupled pair of optical derivatives of a
-                            defocused image using a simple, closed-form relationship...
+                            passive-lighting 3D sensing mechanism...
                         </p>
+                        <p><strong>Link:</strong> <a href="https://arxiv.org/abs/2409.10725" target="_blank">[arXiv]</a></p>
                     </div>
                     <div class="publication-meta">
-                        <p><strong>Published:</strong> 2024, arXiv preprint arXiv:2409.10725</p>
+                        <p><strong>Preprinted:</strong> 2024, arXiv preprint arXiv:2409.10725</p>
                     </div>
                 </div>
                 <div class="publication-card">
@@ -86,9 +83,9 @@
                         <h3>CT-Bound: Fast Boundary Estimation From Noisy Images</h3>
                         <p><strong>Authors:</strong> Xu, W., Luo, J. and Guo, Q.</p>
                         <p class="publication-abstract"><strong>Abstract:</strong>
-                            <br>We present CT-Bound, a robust and fast boundary detection method for very noisy images
-                            using a hybrid Convolution and Transformer neural network...
+                            <br>We present CT-Bound, a robust and fast boundary detection method for very noisy images...
                         </p>
+                        <p><strong>Link:</strong> <a href="https://arxiv.org/abs/2403.16494" target="_blank">[arXiv]</a></p>
                     </div>
                     <div class="publication-meta">
                         <p><strong>Published:</strong> 2024, arXiv preprint arXiv:2403.16494</p>
@@ -100,25 +97,30 @@
                         <p><strong>Authors:</strong> Purohit, V., Luo, J., Chi, Y., Guo, Q., Chan, S.H. and Qiu, Q.</p>
                         <p class="publication-abstract"><strong>Abstract:</strong>
                             <br>The astonishing development of single-photon cameras has created an unprecedented
-                            opportunity for scientific and industrial imaging...
+                            opportunity...
                         </p>
+                        <p><strong>Link:</strong> <a href="https://arxiv.org/abs/2403.19066" target="_blank">[arXiv]</a></p>
                     </div>
                     <div class="publication-meta">
                         <p><strong>Published:</strong> 2024, IEEE/CVF Conference on Computer Vision and Pattern
                             Recognition</p>
                     </div>
                 </div>
+                <!-- Extra space at the bottom for better scrolling -->
+                <div style="height: 50px;"></div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section-content block-frame">
+        <section id="contact" class="section-content block-frame animate-section">
             <h2>Contact</h2>
-            <p>You can reach me at:</p>
-            <ul>
-                <li>Email: luo330@purdue.edu</li>
-                <li>Office: Purdue University, Electrical and Computer Engineering Department</li>
-            </ul>
+            <div class="scrollable-content">
+                <p>You can reach me at:</p>
+                <ul>
+                    <li>Email: luo330@purdue.edu</li>
+                    <li>Office: Flex Lab 3095, 205 Gates Rd, West Lafayette, IN 47906</li>
+                </ul>
+            </div>
         </section>
     </main>
 
