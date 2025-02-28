@@ -13,33 +13,38 @@
     <header>
         <div class="header-container">
             <h1>Focal Split: Untethered Snapshot Depth from Differential Defocus</h1>
-            <p><strong>Authors:</strong> Luo, J., Mamish, J., Fu, A., Concannon, T., Hester, J., Alexander, E., Guo, Q.
-            </p>
+            <p><strong>Authors:</strong> Luo, J., Mamish, J., Fu, A., Concannon, T., Hester, J., Alexander, E., Guo, Q.</p>
         </div>
     </header>
 
     <nav>
         <a href="../../index.html" class="menu-item"><i class="fas fa-home"></i> Home</a>
+        <a href="#gallery" class="menu-item"><i class="fas fa-images"></i> Gallery</a>
         <a href="#abstract" class="menu-item"><i class="fas fa-file-alt"></i> Abstract</a>
-        <a href="#materials" class="menu-item"><i class="fas fa-folder-open"></i> Materials</a>
         <a href="#contact" class="menu-item"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
 
     <main>
+        <section id="gallery" class="section-content block-frame animate-section">
+            <h2>Gallery</h2>
+            <div class="gallery-wrapper">
+                <div class="large-image-container">
+                    <img id="largeImage" src="./img/figure1.png" alt="Large Display" class="large-image">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./img/figure1.png" alt="Figure 1" class="thumbnail" onclick="changeImage(this)">
+                    <img src="./img/figure2.png" alt="Figure 2" class="thumbnail" onclick="changeImage(this)">
+                    <img src="./img/figure3.png" alt="Figure 3" class="thumbnail" onclick="changeImage(this)">
+                </div>
+            </div>
+        </section>
+
         <section id="abstract" class="section-content block-frame animate-section">
             <h2>Abstract</h2>
-            <p>Depth cameras promise to revolutionize mobile systems, but their size and power consumption limit their
-                adoption.
-                In this work we introduce Focal Split, the first handheld depth-from-differential-defocus (DfDD) camera
-                with fully onboard power and compute. Unlike active illumination systems like LiDAR, we avoid power
-                consumption associated with light sources, and our use of differential defocus sidesteps
-                energy-intensive computation associated with passive triangulation methods like multi-view stereo and
-                traditional depth-from-defocus.
-                We extend DfDD theory around a portable, handheld opto-mechanical design which is robust due to its
-                snapshot depth images. Our camera shows that a depth-from-defocus system can feasibly be operated in
-                real-time on resource-constrained systems, with a battery life of 2 hours.
-                Focal Split is DIY friendly. We include a guide to building the depth sensor using off-the-shelf optics,
-                circuits, and mechanics with 3D-printed housing under $500. </p>
+            <p>Depth cameras promise to revolutionize mobile systems, but their size and power consumption limit their adoption.
+                In this work we introduce Focal Split, the first handheld depth-from-differential-defocus (DfDD) camera with fully onboard power and compute. Unlike active illumination systems like LiDAR, we avoid power consumption associated with light sources, and our use of differential defocus sidesteps energy-intensive computation associated with passive triangulation methods like multi-view stereo and traditional depth-from-defocus.
+                We extend DfDD theory around a portable, handheld opto-mechanical design which is robust due to its snapshot depth images. Our camera shows that a depth-from-defocus system can feasibly be operated in real-time on resource-constrained systems, with a battery life of 2 hours.
+                Focal Split is DIY friendly. We include a guide to building the depth sensor using off-the-shelf optics, circuits, and mechanics with 3D-printed housing under $500. </p>
             <p>
                 <strong>Paper:</strong> <a href="" target="_blank">[arXiv]</a> |
                 <strong>Supplementary Materials:</strong> <a href="" target="_blank">[PDF]</a> |
@@ -56,10 +61,6 @@
                 <li>Minimal computational overhead</li>
                 <li>Ideal for low-power and mobile applications</li>
             </ul>
-        </section>
-
-        <section id="materials" class="section-content block-frame animate-section">
-            <h2>Project Materials</h2>
         </section>
 
         <section id="contact" class="section-content block-frame animate-section">
@@ -86,7 +87,7 @@
         </div>
     </footer>
 
-    <script src="../../src/scripts.js"></script>
+    <script src="./src/scripts.js"></script>
 </body>
 
 </html>
