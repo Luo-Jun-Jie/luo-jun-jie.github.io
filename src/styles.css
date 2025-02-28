@@ -22,6 +22,7 @@ html {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -113,9 +114,11 @@ nav {
     margin-bottom: 50px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    height: 450px; /* Fixed height for sections */
+    height: 450px;
+    /* Fixed height for sections */
     overflow: hidden;
-    max-width: 1000px; /* Constrain width */
+    max-width: 1000px;
+    /* Constrain width */
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -130,7 +133,8 @@ nav {
 .scrollable-content {
     overflow-y: auto;
     height: 100%;
-    padding-right: 10px; /* Prevent overlap with scrollbar */
+    padding-right: 10px;
+    /* Prevent overlap with scrollbar */
 }
 
 /* Custom Scrollbar Styling */
@@ -191,7 +195,8 @@ li {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-bottom: 50px; /* Extra space at bottom */
+    padding-bottom: 50px;
+    /* Extra space at bottom */
 }
 
 .publication-card {
@@ -273,4 +278,73 @@ footer {
     padding-top: 20px;
     margin-top: 20px;
     font-size: 0.9em;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery-image {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .gallery-image {
+        max-width: 80%;
+    }
+}
+
+.gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.large-image-container {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    /* Fixed height for better consistency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.large-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensures the entire image is visible */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
 }
