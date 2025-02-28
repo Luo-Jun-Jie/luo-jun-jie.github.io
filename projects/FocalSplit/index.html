@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
     <link rel="stylesheet" href="../../src/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="header-container">
             <h1>Focal Split: Untethered Snapshot Depth from Differential Defocus</h1>
-            <p><strong>Authors:</strong> Luo, J., Mamish, J., Fu, A., Concannon, T., Hester, J., Alexander, E., Guo, Q.</p>
+            <p><strong>Authors:</strong> Luo, J., Mamish, J., Fu, A., Concannon, T., Hester, J., Alexander, E., Guo, Q.
+            </p>
         </div>
     </header>
 
@@ -25,7 +28,18 @@
     <main>
         <section id="abstract" class="section-content block-frame animate-section">
             <h2>Abstract</h2>
-            <p>We present Focal Split, a snapshot depth from differential defocus method that uses two images captured with different sensor distances by a beamsplitter. This technique enables untethered, high-speed depth estimation with minimal computational complexity.</p>
+            <p>Depth cameras promise to revolutionize mobile systems, but their size and power consumption limit their
+                adoption.
+                In this work we introduce Focal Split, the first handheld depth-from-differential-defocus (DfDD) camera
+                with fully onboard power and compute. Unlike active illumination systems like LiDAR, we avoid power
+                consumption associated with light sources, and our use of differential defocus sidesteps
+                energy-intensive computation associated with passive triangulation methods like multi-view stereo and
+                traditional depth-from-defocus.
+                We extend DfDD theory around a portable, handheld opto-mechanical design which is robust due to its
+                snapshot depth images. Our camera shows that a depth-from-defocus system can feasibly be operated in
+                real-time on resource-constrained systems, with a battery life of 2 hours.
+                Focal Split is DIY friendly. We include a guide to building the depth sensor using off-the-shelf optics,
+                circuits, and mechanics with 3D-printed housing under $500. </p>
         </section>
 
         <section id="highlights" class="section-content block-frame animate-section">
@@ -74,4 +88,5 @@
 
     <script src="../../src/scripts.js"></script>
 </body>
+
 </html>
