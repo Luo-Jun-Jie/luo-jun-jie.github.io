@@ -4,45 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junjie Luo - Academic Profile</title>
+    <title>Junjie Luo – Academic Profile</title>
+    <meta name="description"
+          content="Academic homepage of Junjie Luo, PhD student in Electrical and Computer Engineering at Purdue University.">
     <link rel="stylesheet" href="./src/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="header-container">
-            <h1>Junjie Luo</h1>
-            <p>PhD Student, Electrical and Computer Engineering, Purdue University</p>
+            <div class="header-left">
+                <h1 class="name">Junjie Luo</h1>
+                <p class="header-line">PhD Student, Electrical and Computer Engineering</p>
+                <p class="header-line">Purdue University</p>
+            </div>
+
+            <div class="header-right">
+                <!-- Optional portrait -->
+                <!-- <img src="./img/junjie.jpg" alt="Portrait of Junjie Luo" class="profile-photo"> -->
+
+                <div class="header-logos">
+                    <!-- Optional Northwestern logo in the header -->
+                    <!-- <img src="./img/Northwestern_logo.png" alt="Northwestern logo" class="header-logo"> -->
+                    <img src="./img/Purdue_logo.png" alt="Purdue University logo" class="header-logo">
+                </div>
+            </div>
         </div>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#about" class="menu-item"><i class="fas fa-user"></i> About</a>
+            <a href="#education" class="menu-item"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="#publications" class="menu-item"><i class="fas fa-book"></i> Publications</a>
+            <a href="#contact" class="menu-item"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
     </header>
 
-    <!-- Navigation with icons -->
-    <nav>
-        <a href="#about" class="menu-item"><i class="fas fa-user"></i> About Me</a>
-        <a href="#education" class="menu-item"><i class="fas fa-flask"></i> Education</a>
-        <a href="#publications" class="menu-item"><i class="fas fa-book"></i> Publications</a>
-        <a href="#contact" class="menu-item"><i class="fas fa-envelope"></i> Contact</a>
-    </nav>
-
-    <!-- Section content -->
-    <main>
+    <!-- MAIN CONTENT -->
+    <main class="main-wrapper">
         <!-- About Me Section -->
         <section id="about" class="section-content block-frame animate-section">
-            <h2>About Me</h2>
-            <div class="scrollable-content">
-                <p>Hello! I am Junjie Luo, a PhD student in Electrical and Computer Engineering at Purdue University. My
-                    research focuses on Depth from Defocus methods, particularly Depth from Couple Optical Differentiation
-                    (COD), and real-time depth estimation. I am passionate about advancing imaging techniques and developing
-                    computational methods to solve complex optical problems.</p>
+            <h2>About</h2>
+            <div class="section-body">
+                <p>
+                    I am a PhD student in the School of Electrical and Computer Engineering at
+                    <strong>Purdue University</strong>, where I work on passive depth sensing and computational
+                    imaging. My research focuses on depth-from-defocus (DfD) methods, with an emphasis on
+                    <strong>Depth from Coupled Optical Differentiation (COD)</strong> and real-time depth estimation.
+                </p>
+                <p>
+                    Broadly, I am interested in designing imaging systems and algorithms that extract reliable 3D
+                    information from minimal measurements, especially under photon-limited or hardware-constrained
+                    settings.
+                </p>
 
-                <p>My research interests include:</p>
+                <h3>Research Interests</h3>
                 <ul>
-                    <li>Depth from Defocus (DfD) techniques</li>
-                    <li>Computational imaging</li>
-                    <li>Real-time depth estimation</li>
-                    <li>Optical differentiation methods</li>
+                    <li>Depth from Defocus / Differential Defocus</li>
+                    <li>Computational imaging and 3D computer vision</li>
+                    <li>Real-time depth estimation and system prototyping</li>
+                    <li>Optical differentiation and defocus-based sensing</li>
                 </ul>
             </div>
         </section>
@@ -50,12 +75,21 @@
         <!-- Education Section -->
         <section id="education" class="section-content block-frame animate-section">
             <h2>Education</h2>
-            <div class="scrollable-content">
-                <h3>Short CV</h3>
+            <div class="section-body">
                 <ul>
-                    <li>PhD Student, Electrical and Computer Engineering, Purdue University (Present)</li>
-                    <li>MSc in Computer Information and Technology, Purdue University</li>
-                    <li>BSc in Computer Science, Sun Yat-sun University</li>
+                    <li>
+                        <strong>PhD, Electrical and Computer Engineering</strong><br>
+                        Purdue University, West Lafayette, IN, USA<br>
+                        <span class="edu-meta">In progress</span>
+                    </li>
+                    <li>
+                        <strong>MS, Computer Information and Technology</strong><br>
+                        Purdue University, West Lafayette, IN, USA
+                    </li>
+                    <li>
+                        <strong>BS, Computer Science</strong><br>
+                        Sun Yat-sen University, Guangzhou, China
+                    </li>
                 </ul>
             </div>
         </section>
@@ -63,109 +97,197 @@
         <!-- Publications Section -->
         <section id="publications" class="section-content block-frame animate-section">
             <h2>Publications</h2>
-            <div class="scrollable-content publications-container">
+            <div class="section-body publications-container">
+
                 <div class="publication-card">
-                    <div class="publication-info">
-                        <h3>Focal Split: Untethered Snapshot Depth from Differential Defocus</h3>
-                        <p><strong>Authors:</strong> Luo, J., Mamish, J., Fu, A., Concannon, T., Hester, J., Alexander, E., Guo, Q.</p>
-                        <p class="publication-abstract"><strong>Abstract:</strong>
-                            <br>We present Focal Split, a snapshot depth from differential defocus method that uses two images captured with different sensor distances by a beamsplitter...
-                        </p>
-                        <p><strong>Link:</strong> <a href="" target="_blank">[arXiv]</a> | <strong>Project Page:</strong> <a href="projects/FocalSplit/index.html" target="_blank">[page]</a></p>
+                    <div class="publication-main">
+                        <div class="publication-info">
+                            <h3>Focal Split: Untethered Snapshot Depth from Differential Defocus</h3>
+                            <p class="pub-authors">
+                                <strong>Luo, J.</strong>, Mamish, J., Fu, A., Concannon, T., Hester, J.,
+                                Alexander, E., Guo, Q.
+                            </p>
+                            <p class="publication-abstract">
+                                <strong>Abstract.</strong>
+                                We present Focal Split, a snapshot depth-from-differential-defocus method that uses
+                                two images captured with different sensor distances via a beamsplitter to recover dense,
+                                long-range depth with a compact form factor.
+                            </p>
+                            <p class="pub-links">
+                                <strong>Link:</strong>
+                                <a href="https://cvpr.thecvf.com/virtual/2025/poster/33349" target="_blank" rel="noopener">[paper]</a>
+                                &nbsp;|&nbsp;
+                                <strong>Project page:</strong>
+                                <a href="https://focal-split.qiguo.org/" target="_blank" rel="noopener">[page]</a>
+                            </p>
+                        </div>
+                        <img src="./img/Purdue_logo.png"
+                             alt="Purdue University logo"
+                             class="publication-signature">
                     </div>
                     <div class="publication-meta">
-                        <p><strong>Preprinted:</strong> 2025, IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR)</p>
+                        IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025.
                     </div>
                 </div>
+
                 <div class="publication-card">
-                    <div class="publication-info">
-                        <h3>Blurry-Edges: Photon-Limited Depth Estimation from Defocused Boundaries</h3>
-                        <p><strong>Authors:</strong> Xu, W., Wagner, C., Luo, J., Guo, Qi.</p>
-                        <p class="publication-abstract"><strong>Abstract:</strong>
-                            <br>We present a novel approach to robustly measure object depths from photon-limited images along the defocused boundaries...
-                        </p>
-                        <p><strong>Link:</strong> <a href="" target="_blank">[arXiv]</a></p>
+                    <div class="publication-main">
+                        <div class="publication-info">
+                            <h3>Blurry-Edges: Photon-Limited Depth Estimation from Defocused Boundaries</h3>
+                            <p class="pub-authors">
+                                Xu, W., Wagner, C., <strong>Luo, J.</strong>, Guo, Q.
+                            </p>
+                            <p class="publication-abstract">
+                                <strong>Abstract.</strong>
+                                We propose a boundary-focused approach for depth estimation under extreme photon
+                                limitations, leveraging defocused edges to obtain robust depth measurements when
+                                conventional methods fail.
+                            </p>
+                            <p class="pub-links">
+                                <strong>Link:</strong>
+                                <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_Blurry-Edges_Photon-Limited_Depth_Estimation_from_Defocused_Boundaries_CVPR_2025_paper.pdf"
+                                   target="_blank" rel="noopener">[paper]</a>
+                                &nbsp;|&nbsp;
+                                <strong>Project page:</strong>
+                                <a href="https://blurry-edges.qiguo.org/" target="_blank" rel="noopener">[page]</a>
+                            </p>
+                        </div>
+                        <img src="./img/Purdue_logo.png"
+                             alt="Purdue University logo"
+                             class="publication-signature">
                     </div>
                     <div class="publication-meta">
-                        <p><strong>Preprinted:</strong> 2025, IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR)</p>
+                        IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025.
                     </div>
                 </div>
+
                 <div class="publication-card">
-                    <div class="publication-info">
-                        <h3>Depth from Coupled Optical Differentiation</h3>
-                        <p><strong>Authors:</strong> Luo, J., Liu, Y., Alexander, E. and Guo, Q.</p>
-                        <p class="publication-abstract"><strong>Abstract:</strong>
-                            <br>We propose depth from coupled optical differentiation, a low-computation
-                            passive-lighting 3D sensing mechanism...
-                        </p>
-                        <p><strong>Link:</strong> <a href="https://arxiv.org/abs/2409.10725" target="_blank">[arXiv]</a></p>
+                    <div class="publication-main">
+                        <div class="publication-info">
+                            <h3>Depth from Coupled Optical Differentiation</h3>
+                            <p class="pub-authors">
+                                <strong>Luo, J.</strong>, Liu, Y., Alexander, E., Guo, Q.
+                            </p>
+                            <p class="publication-abstract">
+                                <strong>Abstract.</strong>
+                                We propose depth from coupled optical differentiation, a low-computation passive-lighting
+                                3D sensing mechanism that exploits jointly designed optical transfer functions and
+                                computational reconstruction.
+                            </p>
+                            <p class="pub-links">
+                                <strong>Link:</strong>
+                                <a href="https://link.springer.com/article/10.1007/s11263-025-02534-z"
+                                   target="_blank" rel="noopener">[paper]</a>
+                                &nbsp;|&nbsp;
+                                <strong>Project page:</strong>
+                                <a href="https://cod.qiguo.org/" target="_blank" rel="noopener">[page]</a>
+                            </p>
+                        </div>
+                        <img src="./img/Purdue_logo.png"
+                             alt="Purdue University logo"
+                             class="publication-signature">
                     </div>
                     <div class="publication-meta">
-                        <p><strong>Preprinted:</strong> 2024, arXiv preprint arXiv:2409.10725</p>
+                        International Journal of Computer Vision (IJCV), 2025.
                     </div>
                 </div>
+
                 <div class="publication-card">
-                    <div class="publication-info">
-                        <h3>CT-Bound: Fast Boundary Estimation From Noisy Images</h3>
-                        <p><strong>Authors:</strong> Xu, W., Luo, J. and Guo, Q.</p>
-                        <p class="publication-abstract"><strong>Abstract:</strong>
-                            <br>We present CT-Bound, a robust and fast boundary detection method for very noisy images...
-                        </p>
-                        <p><strong>Link:</strong> <a href="https://arxiv.org/abs/2403.16494" target="_blank">[arXiv]</a></p>
+                    <div class="publication-main">
+                        <div class="publication-info">
+                            <h3>CT-Bound: Fast Boundary Estimation From Noisy Images</h3>
+                            <p class="pub-authors">
+                                Xu, W., <strong>Luo, J.</strong>, Guo, Q.
+                            </p>
+                            <p class="publication-abstract">
+                                <strong>Abstract.</strong>
+                                We introduce CT-Bound, a robust and computationally efficient boundary detection method
+                                designed for very noisy image regimes, with applications to photon-limited imaging.
+                            </p>
+                            <p class="pub-links">
+                                <strong>Link:</strong>
+                                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10743517"
+                                   target="_blank" rel="noopener">[paper]</a>
+                            </p>
+                        </div>
+                        <img src="./img/Purdue_logo.png"
+                             alt="Purdue University logo"
+                             class="publication-signature">
                     </div>
                     <div class="publication-meta">
-                        <p><strong>Published:</strong> 2024, IEEE 26th International Workshop on Multimedia Signal Processing (MMSP) (pp. 1-6)</p>
+                        IEEE 26th International Workshop on Multimedia Signal Processing (MMSP), 2024.
                     </div>
                 </div>
+
                 <div class="publication-card">
-                    <div class="publication-info">
-                        <h3>Generative Quanta Color Imaging</h3>
-                        <p><strong>Authors:</strong> Purohit, V., Luo, J., Chi, Y., Guo, Q., Chan, S.H. and Qiu, Q.</p>
-                        <p class="publication-abstract"><strong>Abstract:</strong>
-                            <br>The astonishing development of single-photon cameras has created an unprecedented
-                            opportunity...
-                        </p>
-                        <p><strong>Link:</strong> <a href="https://arxiv.org/abs/2403.19066" target="_blank">[arXiv]</a></p>
+                    <div class="publication-main">
+                        <div class="publication-info">
+                            <h3>Generative Quanta Color Imaging</h3>
+                            <p class="pub-authors">
+                                Purohit, V., <strong>Luo, J.</strong>, Chi, Y., Guo, Q., Chan, S. H., Qiu, Q.
+                            </p>
+                            <p class="publication-abstract">
+                                <strong>Abstract.</strong>
+                                We explore generative modeling for color image formation with single-photon cameras,
+                                enabling high-quality reconstructions from severely photon-limited measurements.
+                            </p>
+                            <p class="pub-links">
+                                <strong>Link:</strong>
+                                <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Purohit_Generative_Quanta_Color_Imaging_CVPR_2024_paper.pdf"
+                                   target="_blank" rel="noopener">[paper]</a>
+                            </p>
+                        </div>
+                        <img src="./img/Purdue_logo.png"
+                             alt="Purdue University logo"
+                             class="publication-signature">
                     </div>
                     <div class="publication-meta">
-                        <p><strong>Published:</strong> 2024, IEEE/CVF Conference on Computer Vision and Pattern
-                            Recognition</p>
+                        IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024.
                     </div>
                 </div>
-                <!-- Extra space at the bottom for better scrolling -->
-                <div style="height: 50px;"></div>
+
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="section-content block-frame animate-section">
             <h2>Contact</h2>
-            <div class="scrollable-content">
-                <p>You can reach me at:</p>
+            <div class="section-body">
+                <p>
+                    For research inquiries, collaborations, or questions about my work, feel free to contact me:
+                </p>
                 <ul>
-                    <li>Email: luo330@purdue.edu</li>
-                    <li>Office: Flex Lab 3095, 205 Gates Rd, West Lafayette, IN 47906</li>
+                    <li><strong>Email:</strong> luo330@purdue.edu</li>
+                    <li><strong>Office:</strong> Flex Lab 3095, 205 Gates Rd, West Lafayette, IN 47906, USA</li>
                 </ul>
             </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/junjiel/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/guo-research-group" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:luo330@purdue.edu"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/junjiel/" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/guo-research-group" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:luo330@purdue.edu">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
+
             <img src="./img/Purdue_logo.png" alt="Purdue University Logo" class="purdue-logo">
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2025 Junjie Luo | Last updated: Feb. 2025</p>
+            <p>&copy; 2025 Junjie Luo &nbsp;|&nbsp; Last updated: Feb. 2025</p>
         </div>
     </footer>
 
     <script src="./src/scripts.js"></script>
-
 </body>
 
 </html>

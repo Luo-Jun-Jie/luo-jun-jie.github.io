@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(section);
     });
 
-    // Smooth scrolling for menu items (optional enhancement)
+    // Smooth scrolling for menu items
     menuItems.forEach(menuItem => {
         menuItem.addEventListener('click', (e) => {
             e.preventDefault();
