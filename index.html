@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junjie Luo – Academic Profile</title>
     <meta name="description"
-          content="Academic homepage of Junjie Luo, PhD student in Electrical and Computer Engineering at Purdue University.">
+        content="Academic homepage of Junjie Luo, PhD student in Electrical and Computer Engineering at Purdue University.">
+
+    <!-- Open Graph / Twitter card -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Junjie Luo – Academic Profile">
+    <meta property="og:description"
+        content="PhD student at Purdue ECE working on passive depth sensing and computational imaging.">
+    <meta property="og:url" content="https://luo-jun-jie.github.io/">
+    <meta property="og:image" content="https://luo-jun-jie.github.io/img/junjie.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Junjie Luo – Academic Profile">
+    <meta name="twitter:description"
+        content="PhD student at Purdue ECE working on passive depth sensing and computational imaging.">
+    <meta name="twitter:image" content="https://luo-jun-jie.github.io/img/junjie.jpg">
+
+    <!-- Favicon (inline SVG with initials) -->
+    <link rel="icon"
+        href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'&gt;&lt;rect width='64' height='64' rx='12' fill='%23000'/&gt;&lt;text x='50%25' y='54%25' font-family='Poppins,Arial,sans-serif' font-size='30' font-weight='700' fill='%23fff' text-anchor='middle' dominant-baseline='middle'&gt;JL&lt;/text&gt;&lt;/svg&gt;">
+
     <link rel="stylesheet" href="./src/styles.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -24,25 +41,23 @@
             </div>
 
             <div class="header-right">
-                <!-- Optional portrait -->
-                <!-- <img src="./img/junjie.jpg" alt="Portrait of Junjie Luo" class="profile-photo"> -->
-
                 <div class="header-logos">
-                    <!-- Optional Northwestern logo in the header -->
-                    <!-- <img src="./img/Northwestern_logo.png" alt="Northwestern logo" class="header-logo"> -->
                     <img src="./img/Purdue_logo.png" alt="Purdue University logo" class="header-logo">
                 </div>
             </div>
         </div>
-
-        <!-- Navigation -->
-        <nav>
-            <a href="#about" class="menu-item"><i class="fas fa-user"></i> About</a>
-            <a href="#education" class="menu-item"><i class="fas fa-graduation-cap"></i> Education</a>
-            <a href="#publications" class="menu-item"><i class="fas fa-book"></i> Publications</a>
-            <a href="#contact" class="menu-item"><i class="fas fa-envelope"></i> Contact</a>
-        </nav>
     </header>
+
+    <!-- Sticky Navigation -->
+    <div class="nav-sticky">
+        <nav aria-label="Primary">
+            <a href="#about" class="menu-item"><i class="fas fa-user" aria-hidden="true"></i> About</a>
+            <a href="#education" class="menu-item"><i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                Education</a>
+            <a href="#publications" class="menu-item"><i class="fas fa-book" aria-hidden="true"></i> Publications</a>
+            <a href="#contact" class="menu-item"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
+        </nav>
+    </div>
 
     <!-- MAIN CONTENT -->
     <main class="main-wrapper">
@@ -50,24 +65,58 @@
         <section id="about" class="section-content block-frame animate-section">
             <h2>About</h2>
             <div class="section-body">
-                <p>
-                    I am a PhD student in the School of Electrical and Computer Engineering at
-                    <strong>Purdue University</strong>, where I work on passive depth sensing and computational
-                    imaging. My research focuses on depth-from-defocus (DfD) methods, with an emphasis on
-                    <strong>Depth from Coupled Optical Differentiation (COD)</strong> and real-time depth estimation.
-                </p>
-                <p>
-                    Broadly, I am interested in designing imaging systems and algorithms that extract reliable 3D
-                    information from minimal measurements, especially under photon-limited or hardware-constrained
-                    settings.
-                </p>
+                <div class="job-market-callout" role="note">
+                    <p>
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
+                        <strong>On the job market.</strong>
+                        I am seeking research positions in computational imaging, in both
+                        <strong>industry</strong> and <strong>academia</strong>, starting Summer 2026.
+                        Please feel free to <a href="#contact">reach out</a>, or view my
+                        <a href="https://drive.google.com/file/d/1ZvlrU5Yma8anMsyKZ5p14KQg-zSjhKbI/view?usp=sharing"
+                            target="_blank" rel="noopener">CV</a>
+                        (academia) or
+                        <a href="https://drive.google.com/file/d/18afBarVJPRbz7IZshmAZNnj-p8xPFMsE/view?usp=sharing"
+                            target="_blank" rel="noopener">resume</a>
+                        (industry).
+                    </p>
+                </div>
+                <div class="about-intro">
+                    <img src="./img/junjie.jpg" alt="Portrait of Junjie Luo" class="about-photo" width="180"
+                        height="220">
+                    <div class="about-intro-text">
+                        <p>
+                            I am a PhD student in the School of Electrical and Computer Engineering at
+                            <strong>Purdue University</strong>, advised by
+                            <a href="https://www.qiguo.org/" target="_blank" rel="noopener">Prof. Qi Guo</a>.
+                            I work on passive depth sensing and computational imaging, with a focus on
+                            depth-from-defocus (DfD) and triangulation-based methods. My most recent work,
+                            <strong>Depth from Dual Differential Defocus and Stereo Consensus (D<sup>3</sup>S)</strong>,
+                            unifies differential defocus with stereo triangulation to recover accurate depth from a
+                            4-mm baseline compact binocular system, pushing the trade-off between form factor and
+                            working range.
+                        </p>
+                        <p>
+                            I also work closely with
+                            <a href="https://www.alexander.vision/" target="_blank" rel="noopener">Prof. Emma
+                                Alexander</a>,
+                            who serves as a co-corresponding author on my first-author papers and has shaped much of my
+                            research thinking.
+                        </p>
+                        <p>
+                            Broadly, I am interested in designing imaging systems and algorithms that extract reliable
+                            3D information.
+                        </p>
+                    </div>
+                </div>
 
                 <h3>Research Interests</h3>
                 <ul>
-                    <li>Depth from Defocus / Differential Defocus</li>
-                    <li>Computational imaging and 3D computer vision</li>
-                    <li>Real-time depth estimation and system prototyping</li>
-                    <li>Optical differentiation and defocus-based sensing</li>
+                    <li>Computational imaging and hardware&ndash;algorithm co-design</li>
+                    <li>Passive 3D sensing and depth estimation</li>
+                    <li>Joint optical design and end-to-end optimization of imaging systems</li>
+                    <li>Photon-limited and single-photon imaging</li>
+                    <li>Snapshot and real-time imaging systems</li>
+                    <li>Deep learning and generative models for computational imaging</li>
                 </ul>
             </div>
         </section>
@@ -80,14 +129,14 @@
                     <li>
                         <strong>PhD, Electrical and Computer Engineering</strong><br>
                         Purdue University, West Lafayette, IN, USA<br>
-                        <span class="edu-meta">In progress</span>
+                        <span class="edu-meta">In Progress, Expected Graduation: Summer 2026</span>
                     </li>
                     <li>
                         <strong>MS, Computer Information and Technology</strong><br>
                         Purdue University, West Lafayette, IN, USA
                     </li>
                     <li>
-                        <strong>BS, Computer Science</strong><br>
+                        <strong>BS, Software Engineering</strong><br>
                         Sun Yat-sen University, Guangzhou, China
                     </li>
                 </ul>
@@ -98,6 +147,64 @@
         <section id="publications" class="section-content block-frame animate-section">
             <h2>Publications</h2>
             <div class="section-body publications-container">
+
+                <div class="publication-card">
+                    <div class="publication-main">
+                        <div class="publication-info">
+                            <h3>Depth from Dual Differential Defocus and Stereo Consensus</h3>
+                            <p class="pub-authors">
+                                <strong>Luo, J.</strong>, Xu, W., Alexander, E., Guo, Q.
+                            </p>
+                            <p class="publication-abstract">
+                                <strong>Abstract.</strong>
+                                We present D<sup>3</sup>S, a triangulation-based passive ranging mechanism that unifies
+                                a
+                                new Dual Differential Defocus (D<sup>3</sup>) image&ndash;depth relationship with stereo
+                                triangulation. Enforcing consensus between the two cues yields highly accurate depth
+                                from
+                                a compact binocular prototype (4&nbsp;mm baseline, 12&nbsp;mm effective focal length),
+                                pushing the trade-off between form factor and working range.
+                            </p>
+                            <!-- TODO: add project page / paper link when public -->
+                        </div>
+                        <img src="./img/D3S.png" alt="D3S project logo" class="publication-signature" width="180"
+                            height="180" loading="lazy">
+                    </div>
+                    <div class="publication-meta">
+                        Under review
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-main">
+                        <div class="publication-info">
+                            <h3>Compact Single-Shot Ranging and Near-Far Imaging Using Metasurfaces</h3>
+                            <p class="pub-authors">
+                                <strong>Luo, J.</strong>, Liu, Y., Chen, W. T., Wang, Q., Guo, Q.
+                            </p>
+                            <p class="publication-abstract">
+                                <strong>Abstract.</strong>
+                                We introduce a hybrid metasurface&ndash;refractive imaging architecture that multiplexes
+                                multiple sub-images onto a shared photosensor, enabling simultaneous near-field passive
+                                ranging (12&ndash;20&nbsp;mm working range, &plusmn;1&nbsp;mm accuracy) and far-field
+                                macroscopic imaging at ~40&nbsp;cm, all within a 15&nbsp;mm system track
+                                length&mdash;targeted at resource-constrained edge platforms and AUVs.
+                            </p>
+                            <p class="pub-links">
+                                <strong>Link:</strong>
+                                <a href="https://arxiv.org/pdf/2604.10037" target="_blank" rel="noopener">[paper]</a>
+                                &nbsp;|&nbsp;
+                                <strong>Project page:</strong>
+                                <a href="http://nearfar.qiguo.org/" target="_blank" rel="noopener">[page]</a>
+                            </p>
+                        </div>
+                        <img src="./img/nearfar.png" alt="STTR project logo" class="publication-signature" width="180"
+                            height="180" loading="lazy">
+                    </div>
+                    <div class="publication-meta">
+                        SPIE Defense + Security (Navy STTR Project), 2026.
+                    </div>
+                </div>
 
                 <div class="publication-card">
                     <div class="publication-main">
@@ -115,15 +222,15 @@
                             </p>
                             <p class="pub-links">
                                 <strong>Link:</strong>
-                                <a href="https://cvpr.thecvf.com/virtual/2025/poster/33349" target="_blank" rel="noopener">[paper]</a>
+                                <a href="https://cvpr.thecvf.com/virtual/2025/poster/33349" target="_blank"
+                                    rel="noopener">[paper]</a>
                                 &nbsp;|&nbsp;
                                 <strong>Project page:</strong>
                                 <a href="https://focal-split.qiguo.org/" target="_blank" rel="noopener">[page]</a>
                             </p>
                         </div>
-                        <img src="./img/FocalSplit.png"
-                             alt="Focal Split project logo"
-                             class="publication-signature">
+                        <img src="./img/FocalSplit.png" alt="Focal Split project logo" class="publication-signature"
+                            width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
                         IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025.
@@ -146,15 +253,14 @@
                             <p class="pub-links">
                                 <strong>Link:</strong>
                                 <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_Blurry-Edges_Photon-Limited_Depth_Estimation_from_Defocused_Boundaries_CVPR_2025_paper.pdf"
-                                   target="_blank" rel="noopener">[paper]</a>
+                                    target="_blank" rel="noopener">[paper]</a>
                                 &nbsp;|&nbsp;
                                 <strong>Project page:</strong>
                                 <a href="https://blurry-edges.qiguo.org/" target="_blank" rel="noopener">[page]</a>
                             </p>
                         </div>
-                        <img src="./img/BlurryEdges.png"
-                             alt="Blurry-Edges project logo"
-                             class="publication-signature">
+                        <img src="./img/BlurryEdges.png" alt="Blurry-Edges project logo" class="publication-signature"
+                            width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
                         IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025.
@@ -170,22 +276,22 @@
                             </p>
                             <p class="publication-abstract">
                                 <strong>Abstract.</strong>
-                                We propose depth from coupled optical differentiation, a low-computation passive-lighting
+                                We propose depth from coupled optical differentiation, a low-computation
+                                passive-lighting
                                 3D sensing mechanism that exploits jointly designed optical transfer functions and
                                 computational reconstruction.
                             </p>
                             <p class="pub-links">
                                 <strong>Link:</strong>
-                                <a href="https://link.springer.com/article/10.1007/s11263-025-02534-z"
-                                   target="_blank" rel="noopener">[paper]</a>
+                                <a href="https://link.springer.com/article/10.1007/s11263-025-02534-z" target="_blank"
+                                    rel="noopener">[paper]</a>
                                 &nbsp;|&nbsp;
                                 <strong>Project page:</strong>
                                 <a href="https://cod.qiguo.org/" target="_blank" rel="noopener">[page]</a>
                             </p>
                         </div>
-                        <img src="./img/COD.png"
-                             alt="Depth from Coupled Optical Differentiation project logo"
-                             class="publication-signature">
+                        <img src="./img/COD.png" alt="Depth from Coupled Optical Differentiation project logo"
+                            class="publication-signature" width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
                         International Journal of Computer Vision (IJCV), 2025.
@@ -206,13 +312,12 @@
                             </p>
                             <p class="pub-links">
                                 <strong>Link:</strong>
-                                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10743517"
-                                   target="_blank" rel="noopener">[paper]</a>
+                                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10743517" target="_blank"
+                                    rel="noopener">[paper]</a>
                             </p>
                         </div>
-                        <img src="./img/CTBound.png"
-                             alt="CT-Bound project logo"
-                             class="publication-signature">
+                        <img src="./img/CTBound.png" alt="CT-Bound project logo" class="publication-signature"
+                            width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
                         IEEE 26th International Workshop on Multimedia Signal Processing (MMSP), 2024.
@@ -234,12 +339,11 @@
                             <p class="pub-links">
                                 <strong>Link:</strong>
                                 <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Purohit_Generative_Quanta_Color_Imaging_CVPR_2024_paper.pdf"
-                                   target="_blank" rel="noopener">[paper]</a>
+                                    target="_blank" rel="noopener">[paper]</a>
                             </p>
                         </div>
-                        <img src="./img/GQCI.png"
-                             alt="Generative Quanta Color Imaging project logo"
-                             class="publication-signature">
+                        <img src="./img/GQCI.png" alt="Generative Quanta Color Imaging project logo"
+                            class="publication-signature" width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
                         IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024.
@@ -268,14 +372,14 @@
     <footer>
         <div class="footer-content">
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/junjiel/" target="_blank" rel="noopener">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/junjiel/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                 </a>
-                <a href="https://github.com/guo-research-group" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i>
+                <a href="https://github.com/guo-research-group" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
-                <a href="mailto:luo330@purdue.edu">
-                    <i class="fas fa-envelope"></i>
+                <a href="mailto:luo330@purdue.edu" aria-label="Email">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                 </a>
             </div>
 
@@ -283,7 +387,8 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Junjie Luo &nbsp;|&nbsp; Last updated: Feb. 2025</p>
+            <p>&copy; <span id="footer-year">2026</span> Junjie Luo &nbsp;|&nbsp; Last updated: <span
+                    id="footer-updated">May 2026</span></p>
         </div>
     </footer>
 

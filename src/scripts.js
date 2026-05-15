@@ -1,44 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menuItems = document.querySelectorAll(".menu-item");
     const sections = document.querySelectorAll("section");
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Intersection Observer to trigger animations and handle active menu item
+    // If reduced motion is requested, make everything visible up front.
+    if (prefersReducedMotion) {
+        sections.forEach((section) => section.classList.add('visible'));
+    }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
             const sectionID = entry.target.getAttribute("id");
 
-            // Handle visibility for animations
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            } else {
-                entry.target.classList.remove('visible'); // Remove when not in view for repeat
-            }
+            entry.target.classList.add('visible');
 
-            // Handle the active menu item highlight
-            if (entry.isIntersecting) {
-                menuItems.forEach((menuItem) => {
-                    menuItem.classList.remove("active");
-                    if (menuItem.getAttribute("href") === `#${sectionID}`) {
-                        menuItem.classList.add("active");
-                    }
-                });
-            }
+            menuItems.forEach((menuItem) => {
+                menuItem.classList.remove("active");
+                if (menuItem.getAttribute("href") === `#${sectionID}`) {
+                    menuItem.classList.add("active");
+                }
+            });
         });
     }, { threshold: 0.1 });
 
-    // Observe all sections
     sections.forEach((section) => {
         observer.observe(section);
     });
 
-    // Smooth scrolling for menu items
     menuItems.forEach(menuItem => {
         menuItem.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = menuItem.getAttribute("href").substring(1);
             document.getElementById(targetId).scrollIntoView({
-                behavior: 'smooth'
+                behavior: prefersReducedMotion ? 'auto' : 'smooth'
             });
         });
     });
+
+    // Auto-update footer year so the copyright never goes stale.
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
