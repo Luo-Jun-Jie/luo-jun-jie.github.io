@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luo-jun-jie.github.io/sitemap.xml

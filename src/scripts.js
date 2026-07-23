@@ -1,11 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menuItems = document.querySelectorAll(".menu-item");
-    const sections = document.querySelectorAll("section");
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const sections = document.querySelectorAll("section[id]");
 
-    // If reduced motion is requested, make everything visible up front.
-    if (prefersReducedMotion) {
+    // Auto-update footer year so the copyright never goes stale.
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Reveal sections as they scroll into view and highlight the active nav item.
+    // Anchor navigation itself is native: CSS scroll-behavior handles smoothness
+    // (and prefers-reduced-motion), so the URL hash stays in sync.
+    // Fail open: if IntersectionObserver is unavailable, show everything.
+    if (!('IntersectionObserver' in window)) {
         sections.forEach((section) => section.classList.add('visible'));
+        return;
     }
 
     const observer = new IntersectionObserver((entries) => {
@@ -16,9 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
             entry.target.classList.add('visible');
 
             menuItems.forEach((menuItem) => {
-                menuItem.classList.remove("active");
-                if (menuItem.getAttribute("href") === `#${sectionID}`) {
-                    menuItem.classList.add("active");
+                const isActive = menuItem.getAttribute("href") === `#${sectionID}`;
+                menuItem.classList.toggle("active", isActive);
+                if (isActive) {
+                    menuItem.setAttribute("aria-current", "true");
+                } else {
+                    menuItem.removeAttribute("aria-current");
                 }
             });
         });
@@ -27,18 +37,4 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section) => {
         observer.observe(section);
     });
-
-    menuItems.forEach(menuItem => {
-        menuItem.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = menuItem.getAttribute("href").substring(1);
-            document.getElementById(targetId).scrollIntoView({
-                behavior: prefersReducedMotion ? 'auto' : 'smooth'
-            });
-        });
-    });
-
-    // Auto-update footer year so the copyright never goes stale.
-    const yearEl = document.getElementById('footer-year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
