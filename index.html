@@ -7,29 +7,80 @@
     <title>Junjie Luo – Academic Profile</title>
     <meta name="description"
         content="Academic homepage of Junjie Luo, PhD student in Electrical and Computer Engineering at Purdue University.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://luo-jun-jie.github.io/">
+    <script>document.documentElement.className += ' js';</script>
 
     <!-- Open Graph / Twitter card -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Junjie Luo">
     <meta property="og:title" content="Junjie Luo – Academic Profile">
     <meta property="og:description"
         content="PhD student at Purdue ECE working on passive depth sensing and computational imaging.">
     <meta property="og:url" content="https://luo-jun-jie.github.io/">
-    <meta property="og:image" content="https://luo-jun-jie.github.io/img/junjie.jpg">
+    <meta property="og:image" content="https://luo-jun-jie.github.io/img/Junjie.jpg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="750">
+    <meta property="og:image:alt" content="Portrait of Junjie Luo">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Junjie Luo – Academic Profile">
     <meta name="twitter:description"
         content="PhD student at Purdue ECE working on passive depth sensing and computational imaging.">
-    <meta name="twitter:image" content="https://luo-jun-jie.github.io/img/junjie.jpg">
+    <meta name="twitter:image" content="https://luo-jun-jie.github.io/img/Junjie.jpg">
 
     <!-- Favicon (inline SVG with initials) -->
     <link rel="icon"
         href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'&gt;&lt;rect width='64' height='64' rx='12' fill='%23000'/&gt;&lt;text x='50%25' y='54%25' font-family='Poppins,Arial,sans-serif' font-size='30' font-weight='700' fill='%23fff' text-anchor='middle' dominant-baseline='middle'&gt;JL&lt;/text&gt;&lt;/svg&gt;">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
     <link rel="stylesheet" href="./src/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Junjie Luo",
+        "url": "https://luo-jun-jie.github.io/",
+        "image": "https://luo-jun-jie.github.io/img/Junjie.jpg",
+        "jobTitle": "PhD Student, Electrical and Computer Engineering",
+        "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Purdue University"
+        },
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Purdue University"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Sun Yat-sen University"
+            }
+        ],
+        "email": "mailto:luo330@purdue.edu",
+        "sameAs": [
+            "https://www.linkedin.com/in/junjiel/"
+        ],
+        "knowsAbout": [
+            "Computational imaging",
+            "Passive depth sensing",
+            "Depth from defocus",
+            "Computer vision"
+        ]
+    }
+    </script>
 </head>
 
 <body>
+
+    <a class="skip-link" href="#about">Skip to content</a>
 
     <!-- HEADER -->
     <header>
@@ -42,7 +93,8 @@
 
             <div class="header-right">
                 <div class="header-logos">
-                    <img src="./img/Purdue_logo.png" alt="Purdue University logo" class="header-logo">
+                    <img src="./img/Purdue_logo.png" alt="Purdue University logo" class="header-logo" width="1257"
+                        height="225">
                 </div>
             </div>
         </div>
@@ -51,11 +103,43 @@
     <!-- Sticky Navigation -->
     <div class="nav-sticky">
         <nav aria-label="Primary">
-            <a href="#about" class="menu-item"><i class="fas fa-user" aria-hidden="true"></i> About</a>
-            <a href="#education" class="menu-item"><i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <a href="#about" class="menu-item">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                About</a>
+            <a href="#news" class="menu-item">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+                News</a>
+            <a href="#education" class="menu-item">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path
+                        d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z">
+                    </path>
+                </svg>
                 Education</a>
-            <a href="#publications" class="menu-item"><i class="fas fa-book" aria-hidden="true"></i> Publications</a>
-            <a href="#contact" class="menu-item"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
+            <a href="#publications" class="menu-item">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                Publications</a>
+            <a href="#contact" class="menu-item">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Contact</a>
         </nav>
     </div>
 
@@ -67,7 +151,12 @@
             <div class="section-body">
                 <div class="job-market-callout" role="note">
                     <p>
-                        <i class="fas fa-briefcase" aria-hidden="true"></i>
+                        <svg class="icon callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                            focusable="false">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
                         <strong>On the job market.</strong>
                         I am seeking research positions in computational imaging, in both
                         <strong>industry</strong> and <strong>academia</strong>, starting Summer 2026.
@@ -81,8 +170,8 @@
                     </p>
                 </div>
                 <div class="about-intro">
-                    <img src="./img/Junjie.jpg" alt="Portrait of Junjie Luo" class="about-photo" width="180"
-                        height="220">
+                    <img src="./img/Junjie.jpg" alt="Portrait of Junjie Luo" class="about-photo" width="600"
+                        height="750" fetchpriority="high">
                     <div class="about-intro-text">
                         <p>
                             I am a PhD student in the School of Electrical and Computer Engineering at
@@ -117,6 +206,35 @@
                     <li>Photon-limited and single-photon imaging</li>
                     <li>Snapshot and real-time imaging systems</li>
                     <li>Deep learning and generative models for computational imaging</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section-content block-frame animate-section">
+            <h2>News</h2>
+            <div class="section-body">
+                <ul class="news-list">
+                    <li>
+                        <span class="news-date">2026</span>
+                        <span class="news-text">Our compact near&ndash;far metasurface imaging work (Navy STTR
+                            project) appeared at SPIE Defense&nbsp;+&nbsp;Security 2026.</span>
+                    </li>
+                    <li>
+                        <span class="news-date">2025</span>
+                        <span class="news-text"><em>Depth from Coupled Optical Differentiation</em> was accepted to
+                            the International Journal of Computer Vision (IJCV).</span>
+                    </li>
+                    <li>
+                        <span class="news-date">2025</span>
+                        <span class="news-text">Two papers at CVPR 2025: <em>Focal Split</em> (first-author) and
+                            <em>Blurry-Edges</em>.</span>
+                    </li>
+                    <li>
+                        <span class="news-date">2024</span>
+                        <span class="news-text"><em>CT-Bound</em> appeared at IEEE MMSP 2024, and <em>Generative
+                                Quanta Color Imaging</em> at CVPR 2024.</span>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -167,7 +285,7 @@
                             </p>
                             <!-- TODO: add project page / paper link when public -->
                         </div>
-                        <img src="./img/D3S.png" alt="D3S project logo" class="publication-signature" width="180"
+                        <img src="./img/D3S.webp" alt="D3S project teaser" class="publication-signature" width="180"
                             height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
@@ -195,11 +313,11 @@
                                 <a href="https://arxiv.org/pdf/2604.10037" target="_blank" rel="noopener">[paper]</a>
                                 &nbsp;|&nbsp;
                                 <strong>Project page:</strong>
-                                <a href="http://nearfar.qiguo.org/" target="_blank" rel="noopener">[page]</a>
+                                <a href="https://nearfar.qiguo.org/" target="_blank" rel="noopener">[page]</a>
                             </p>
                         </div>
-                        <img src="./img/nearfar.png" alt="STTR project logo" class="publication-signature" width="180"
-                            height="180" loading="lazy">
+                        <img src="./img/nearfar.webp" alt="Near-far metasurface imaging project teaser"
+                            class="publication-signature" width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
                         SPIE Defense + Security (Navy STTR Project), 2026.
@@ -229,7 +347,7 @@
                                 <a href="https://focal-split.qiguo.org/" target="_blank" rel="noopener">[page]</a>
                             </p>
                         </div>
-                        <img src="./img/FocalSplit.png" alt="Focal Split project logo" class="publication-signature"
+                        <img src="./img/FocalSplit.webp" alt="Focal Split project teaser" class="publication-signature"
                             width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
@@ -259,8 +377,8 @@
                                 <a href="https://blurry-edges.qiguo.org/" target="_blank" rel="noopener">[page]</a>
                             </p>
                         </div>
-                        <img src="./img/BlurryEdges.png" alt="Blurry-Edges project logo" class="publication-signature"
-                            width="180" height="180" loading="lazy">
+                        <img src="./img/BlurryEdges.webp" alt="Blurry-Edges project teaser"
+                            class="publication-signature" width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
                         IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025.
@@ -290,7 +408,7 @@
                                 <a href="https://cod.qiguo.org/" target="_blank" rel="noopener">[page]</a>
                             </p>
                         </div>
-                        <img src="./img/COD.png" alt="Depth from Coupled Optical Differentiation project logo"
+                        <img src="./img/COD.webp" alt="Depth from Coupled Optical Differentiation project teaser"
                             class="publication-signature" width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
@@ -316,7 +434,7 @@
                                     rel="noopener">[paper]</a>
                             </p>
                         </div>
-                        <img src="./img/CTBound.png" alt="CT-Bound project logo" class="publication-signature"
+                        <img src="./img/CTBound.webp" alt="CT-Bound project teaser" class="publication-signature"
                             width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
@@ -342,7 +460,7 @@
                                     target="_blank" rel="noopener">[paper]</a>
                             </p>
                         </div>
-                        <img src="./img/GQCI.png" alt="Generative Quanta Color Imaging project logo"
+                        <img src="./img/GQCI.webp" alt="Generative Quanta Color Imaging project teaser"
                             class="publication-signature" width="180" height="180" loading="lazy">
                     </div>
                     <div class="publication-meta">
@@ -361,7 +479,7 @@
                     For research inquiries, collaborations, or questions about my work, feel free to contact me:
                 </p>
                 <ul>
-                    <li><strong>Email:</strong> luo330@purdue.edu</li>
+                    <li><strong>Email:</strong> <a class="text-link" href="mailto:luo330@purdue.edu">luo330@purdue.edu</a></li>
                     <li><strong>Office:</strong> Flex Lab 3095, 205 Gates Rd, West Lafayette, IN 47906, USA</li>
                 </ul>
             </div>
@@ -373,22 +491,37 @@
         <div class="footer-content">
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/junjiel/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <svg class="icon-social" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                        focusable="false">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z">
+                        </path>
+                    </svg>
                 </a>
                 <a href="https://github.com/guo-research-group" target="_blank" rel="noopener" aria-label="GitHub">
-                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <svg class="icon-social" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                        focusable="false">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                        </path>
+                    </svg>
                 </a>
                 <a href="mailto:luo330@purdue.edu" aria-label="Email">
-                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <svg class="icon-social" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
                 </a>
             </div>
 
-            <img src="./img/Purdue_logo.png" alt="Purdue University Logo" class="purdue-logo">
+            <img src="./img/Purdue_logo.png" alt="Purdue University Logo" class="purdue-logo" width="1257"
+                height="225">
         </div>
 
         <div class="footer-bottom">
             <p>&copy; <span id="footer-year">2026</span> Junjie Luo &nbsp;|&nbsp; Last updated: <span
-                    id="footer-updated">May 2026</span></p>
+                    id="footer-updated">July 2026</span></p>
         </div>
     </footer>
 
